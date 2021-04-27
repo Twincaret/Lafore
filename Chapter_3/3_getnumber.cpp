@@ -3,19 +3,19 @@
 
 int main()
 { 
-	long n = 0;
-	bool flag = true;
-	std::cout << "Enter the number: ";    
+    long n = 0;
+    bool flag = true;
+    std::cout << "Enter the number: ";    
   
     while(n != '\n')
     { 
         n = getchar();
-	    if(flag) 
+        if(flag) 
         {
-		     std::cout << "You've entered the number "; 
-		     flag = false;
+            std::cout << "You've entered the number "; 
+            flag = false;
         }
-	    std::cout << char(n);
+        std::cout << char(n);
 	    
     }
 

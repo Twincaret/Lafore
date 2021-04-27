@@ -20,16 +20,17 @@ int main()
             if(ch == '+' || ch == '-' || ch == '*') break;
             else
             {
-				std::cout << "Support operations: [+], [-] and [*].\n"; 
-				flag = false;
-			}
+                std::cout << "Support operations: [+], [-] and [*].\n"; 
+                flag = false;
+            }
         }while(!flag);
         
         if(ch!='*')
         {
             std::cout << "Enter the second amount: " << pndsmbl << ' ';
             std::cin >> z_pnd >> z_shl >> z_pnc; 	
-        }else
+        }
+        else
         {
             std::cout << "Enter the number: ";
             std::cin >> number;
@@ -44,14 +45,14 @@ int main()
             
             if(pnc >= 12)
             {
-				shl += pnc / 12; 
-				pnc %= 12;
-			}
+                shl += pnc / 12; 
+                pnc %= 12;
+            }
             if(shl >= 20)
             {
-				pnd += shl / 20; 
-				shl %= 20;
-			} 
+                pnd += shl / 20; 
+                shl %= 20;
+            } 
 
         }
         switch(ch)	
@@ -62,14 +63,14 @@ int main()
             pnc = x_pnc + z_pnc;	
             if(pnc > 11)
             {
-				++shl; 
-				pnc %= 12;
-			}
+                ++shl; 
+                pnc %= 12;
+            }
             if(shl > 19)
             {
-				++pnd; 
-				shl %= 20;				
-			} break;	
+                ++pnd; 
+                shl %= 20;				
+            } break;	
             
             case '-' :
             pnd = x_pnd - z_pnd;
@@ -77,21 +78,21 @@ int main()
             pnc = x_pnc - z_pnc;
             if(pnc < 0)
             {
-				--shl; 
-				pnc += 12;
-			}
+                --shl; 
+                pnc += 12;
+            }
             if(shl < 0)
             {
-				--pnd; 
-				shl += 20;
-			} break; 
+                --pnd; 
+                shl += 20;
+            } break; 
 	
         }
         std::cout << "The result is: " << pndsmbl << ' ' << pnd << "." << shl << "." << pnc;
         std::cout << "\nContinue (y/n)? ";
         std::cin >> ch;
         
-    }while(ch!='n');	
+    }while(ch != 'n');	
   	
     return 0;
 }

@@ -13,8 +13,10 @@ int main()
     std::cin >> summ;
   
     do{
+    
         init += init * (rate / 100);
-	    ++years;
+        ++years;
+        
     }while(init <= summ);
 
     std::cout << "You have to wait " << years << " years to receive $ " << summ <<".\n";

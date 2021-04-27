@@ -9,5 +9,5 @@ int main()
     std::cin >> symbol;
     std::cout << "The result is: "<< islower(symbol) << std::endl;
 
-	return 0;
+    return 0;
 }

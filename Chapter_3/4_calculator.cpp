@@ -5,13 +5,13 @@ int main()
     char ch, operation;
     double a, b, result;
 
-    do
-    {
+    do{
+    
         std::cout << "Enter the first operand, the operation, and the second operand: ";
         std::cin >> a >> operation >> b;
- 	    if(b == 0 && operation == '/')
+        if(b == 0 && operation == '/')
         {
-			std::cout << "Incorrect divisor!\n";
+            std::cout << "Incorrect divisor!\n";
             continue; 
         }
   
